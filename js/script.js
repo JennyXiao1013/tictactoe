@@ -41,3 +41,52 @@ $("#button9").click(function() {
     performLogic("#button9","#tile9");
 });
 
+
+var total = 0
+var player = "o"
+var is_o = true
+var gameOver = false
+
+function performLogic(buttonId, tileId){
+   if(!gamOver){
+       $(buttonId).hide();
+       $(tileId).html(player);
+       checkVertical();
+       checkHorizontal();
+       checkDiagonal();
+       changePlayer();
+   }
+}
+
+function changePlayer(){
+    total = total + 1
+    if(player == "o"){
+        player = "x"
+    
+    }else{
+        player = "o"
+    }
+}
+
+function checkVertical(){
+
+}
+
+function checkHorizontal(){
+
+}
+
+function checkDiagonal(){
+
+}
+
+function tieGame(){
+
+}
+
+function win(t1, t2, t3){
+    if($(t1).html() == player && $(t2).html() == player  && $(t3).html() == player ){
+        $("h1").text(player + " wins!")
+        gameOver = true
+    }
+}
