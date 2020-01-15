@@ -69,11 +69,13 @@ function changePlayer(){
 }
 
 function checkVertical(){
-
+    win("#tile1", "#tile4", "#tile7")
+    win("#tile2", "#tile5", "#tile8")
+    win("#tile3", "#tile6", "#tile9")
 }
 
 function checkHorizontal(){
-
+    win("#tile1", "#tile2", "#tile3")
 }
 
 function checkDiagonal(){
@@ -85,7 +87,7 @@ function tieGame(){
 }
 
 function win(t1, t2, t3){
-    if($(t1).html() == player && $(t2).html() == player  && $(t3).html() == player ){
+    if($(t1).html() == player && $(t2).html() == player  &&  $(t3).html() == player ){
         $("h1").text(player + " wins!")
         gameOver = true
     }
